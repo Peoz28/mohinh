@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Trang thông tin về mô hình nhà sàn Bác Hồ - Di tích lịch sử, biểu tượng văn hóa và cảm hứng dân tộc.">
+    <title>mô hình nhà sàn Bác Hồ - Thông tin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="hero">
+            <img src="nha-san-bac-ho.jpg" alt="Hình ảnh nhà sàn Bác Hồ" class="hero-img">
+            <h1>mô hình nhà sàn Bác Hồ</h1>
+            <p class="subtitle">Di tích lịch sử | Biểu tượng | Cảm hứng</p>
+            <a href="#about" class="btn">Tìm hiểu thêm</a>
+        </div>
+    </header>
+    <main>
+            <script>
+            function speakContent() {
+                const text = [
+                    document.querySelector('#about p')?.innerText || '',
+                    document.querySelector('#time p')?.innerText || '',
+                    document.querySelector('#achievements').innerText || ''
+                ].join('\n');
+                if ('speechSynthesis' in window) {
+                    const utter = new SpeechSynthesisUtterance(text);
+                    utter.lang = 'vi-VN';
+                    window.speechSynthesis.speak(utter);
+                } else {
+                    alert('Trình duyệt của bạn không hỗ trợ đọc văn bản!');
+                }
+            }
+            </script>
+        <section id="about">
+            <h2>Giới thiệu về Bác Hồ</h2>
+            <p>Chủ tịch Hồ Chí Minh (1890-1969) là lãnh tụ vĩ đại của dân tộc Việt Nam, người sáng lập Đảng Cộng sản Việt Nam và nước Việt Nam Dân chủ Cộng hòa. Bác Hồ nổi tiếng với lối sống giản dị, gần gũi nhân dân, luôn tận tụy vì sự nghiệp giải phóng dân tộc và xây dựng đất nước.</p>
+        </section>
+        <section id="time">
+            <h2>Thời gian Bác sống tại nhà sàn</h2>
+            <p>Bác Hồ sống và làm việc tại nhà sàn trong khu Phủ Chủ tịch từ năm 1958 đến năm 1969. Đây là nơi Bác đã đưa ra nhiều quyết sách quan trọng cho đất nước và để lại nhiều dấu ấn lịch sử.</p>
+        </section>
+        <section id="achievements">
+            <h2>Ý nghĩa lịch sử</h2>
+            <ul>
+                <li>Biểu tượng của lối sống giản dị, thanh cao</li>
+                <li>Gắn liền với nhiều quyết sách quan trọng của đất nước</li>
+                <li>Địa điểm tham quan nổi tiếng tại Hà Nội</li>
+                <li>Di tích được bảo tồn và tôn vinh</li>
+            </ul>
+        </section>
+        <section id="video">
+            <h2>Video giới thiệu</h2>
+            <div class="video-container">
+                <iframe width="100%" height="400" src="https://www.youtube.com/embed/1QGJkQvA2nA" title="Giới thiệu nhà sàn Bác Hồ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <button onclick="speakContent()" style="margin:16px auto;display:block;padding:12px 32px;border-radius:30px;background:#e6b800;color:#222;font-weight:bold;cursor:pointer;">🔊 Đọc nội dung</button>
+    </main>
+    <footer>
+        <p>&copy; 2025 nhà sàn Bác Hồ. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
